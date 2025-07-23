@@ -1,0 +1,107 @@
+<!-- templates/form.html -->
+<!DOCTYPE html>
+<html>
+<head><title>Will Generator</title></head>
+<body>
+  <h1>Will Generator Form</h1>
+  <form action="/submit" method="post">
+
+    <h3>Testator Info</h3>
+    Name: <input type="text" name="name"><br>
+    Father's Name: <input type="text" name="father_name"><br>
+    Address: <input type="text" name="address"><br>
+    Will Date: <input type="date" name="will_date"><br>
+    Signing Location: <input type="text" name="signed_location"><br><br>
+
+    <h3>Beneficiaries</h3>
+    {% for i in range(1, 4) %}
+    <p><strong>Beneficiary {{ i }}</strong></p>
+    Name: <input type="text" name="b_name_{{i}}"><br>
+    Relationship: <input type="text" name="b_relation_{{i}}"><br>
+    PAN/Aadhar: <input type="text" name="b_id_{{i}}"><br>
+    Residence: <input type="text" name="b_residence_{{i}}"><br>
+    Age: <input type="number" name="b_age_{{i}}"><br><br>
+    {% endfor %}
+
+    <h3>Bank Accounts</h3>
+    {% for i in range(1, 3) %}
+    <p><strong>Account {{ i }}</strong></p>
+    Bank Name: <input type="text" name="bank_name_{{i}}"><br>
+    Account Number: <input type="text" name="account_number_{{i}}"><br>
+    Remark: <input type="text" name="bank_remark_{{i}}"><br>
+    Beneficiary: <input type="text" name="bank_beneficiary_{{i}}"><br>
+    % Share: <input type="number" name="bank_share_{{i}}"><br><br>
+    {% endfor %}
+
+    <h3>Insurance Policies</h3>
+    {% for i in range(1, 3) %}
+    Policy Name: <input type="text" name="policy_name_{{i}}"><br>
+    Policy Number: <input type="text" name="policy_number_{{i}}"><br>
+    Remark: <input type="text" name="policy_remark_{{i}}"><br>
+    Beneficiary: <input type="text" name="policy_beneficiary_{{i}}"><br>
+    % Share: <input type="number" name="policy_share_{{i}}"><br><br>
+    {% endfor %}
+
+    <h3>Stocks</h3>
+    {% for i in range(1, 3) %}
+    Brokerage Firm: <input type="text" name="stock_firm_{{i}}"><br>
+    Account Number: <input type="text" name="stock_account_{{i}}"><br>
+    Remark: <input type="text" name="stock_remark_{{i}}"><br>
+    Beneficiary: <input type="text" name="stock_beneficiary_{{i}}"><br>
+    % Share: <input type="number" name="stock_share_{{i}}"><br><br>
+    {% endfor %}
+
+    <h3>Mutual Funds</h3>
+    {% for i in range(1, 3) %}
+    Distributor: <input type="text" name="mf_distributor_{{i}}"><br>
+    Account Number: <input type="text" name="mf_account_{{i}}"><br>
+    Remark: <input type="text" name="mf_remark_{{i}}"><br>
+    Beneficiary: <input type="text" name="mf_beneficiary_{{i}}"><br>
+    % Share: <input type="number" name="mf_share_{{i}}"><br><br>
+    {% endfor %}
+
+    <h3>Jewellery</h3>
+    {% for i in range(1, 3) %}
+    Type: <input type="text" name="jewel_type_{{i}}"><br>
+    Invoice Number: <input type="text" name="jewel_invoice_{{i}}"><br>
+    Remark: <input type="text" name="jewel_remark_{{i}}"><br>
+    Beneficiary: <input type="text" name="jewel_beneficiary_{{i}}"><br>
+    % Share: <input type="number" name="jewel_share_{{i}}"><br><br>
+    {% endfor %}
+
+    <h3>Houses</h3>
+    Property Name: <input type="text" name="house_name"><br>
+    Registration Number: <input type="text" name="house_regno"><br>
+    Remark: <input type="text" name="house_remark"><br>
+    Beneficiary: <input type="text" name="house_beneficiary"><br>
+    % Share: <input type="number" name="house_share"><br><br>
+
+    <h3>Land</h3>
+    Land Name: <input type="text" name="land_name"><br>
+    Registration Number: <input type="text" name="land_regno"><br>
+    Remark: <input type="text" name="land_remark"><br>
+    Beneficiary: <input type="text" name="land_beneficiary"><br>
+    % Share: <input type="number" name="land_share"><br><br>
+
+    <h3>Executors</h3>
+    Executor Name: <input type="text" name="executor_name"><br>
+    Executor's Father's Name: <input type="text" name="executor_father"><br>
+    Executor Address: <input type="text" name="executor_address"><br>
+    Backup Executor Name: <input type="text" name="backup_executor_name"><br>
+    Backup Executor's Father's Name: <input type="text" name="backup_executor_father"><br>
+    Backup Executor Address: <input type="text" name="backup_executor_address"><br><br>
+
+    <h3>Guardian and Witnesses</h3>
+    Wife's Name (for Residue): <input type="text" name="wife_name"><br>
+    Guardian Name: <input type="text" name="guardian_name"><br><br>
+    Will Date: <input type="date" name="will_date"><br>
+    Witness 1 Name: <input type="text" name="witness1_name"><br>
+    Witness 1 Address: <input type="text" name="witness1_address"><br>
+    Witness 2 Name: <input type="text" name="witness2_name"><br>
+    Witness 2 Address: <input type="text" name="witness2_address"><br><br>
+    Signing Location: <input type="text" name="signed_location"><br>
+
+    <input type="submit" value="Generate Will">
+  </form>
+</body>
+</html>
