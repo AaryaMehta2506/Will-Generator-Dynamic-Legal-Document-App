@@ -106,3 +106,7 @@ Feel free to fork the repository, improve the game, and open a pull request. Let
 
 ## 📄 License
 This project is licensed under the [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+
+## 👩‍💻 Author
+**Aarya Mehta**  
+🔗 [GitHub Profile](https://github.com/AaryaMehta2506)
